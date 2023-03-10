@@ -3,6 +3,7 @@ package com.udacity.jdnd.course3.critter.entities;
 import com.udacity.jdnd.course3.critter.user.EmployeeSkill;
 import lombok.Data;
 import lombok.ToString;
+import net.bytebuddy.dynamic.loading.InjectionClassLoader;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -14,7 +15,7 @@ import java.util.Set;
 @Table
 public class Schedule {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
     private LocalDate date;
     @ElementCollection

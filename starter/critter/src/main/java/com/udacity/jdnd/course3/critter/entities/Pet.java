@@ -14,7 +14,7 @@ import java.util.List;
 @Table
 public class Pet {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
     private PetType type;
     @Column(length = 12)

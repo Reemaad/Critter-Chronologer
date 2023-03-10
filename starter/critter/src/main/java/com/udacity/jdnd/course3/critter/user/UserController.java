@@ -61,12 +61,12 @@ public class UserController {
         return Converter.convertFromEmployeeToEmployeeDTO(employee);
     }
 
-    @PutMapping("/employee/{employeeId}") //Done
+    @PutMapping("/employee/{employeeId}")
     public void setAvailability(@RequestBody Set<DayOfWeek> daysAvailable, @PathVariable long employeeId) {
         userService.setAvailability(daysAvailable,employeeId);
     }
 
-    @GetMapping("/employee/availability") //Done
+    @GetMapping("/employee/availability")
     public List<EmployeeDTO> findEmployeesForService(@RequestBody EmployeeRequestDTO employeeRequestDTO) {
         List<Employee> employees = userService.findEmployeesForService(Converter.convertFromEmployeeRequestDTOToEmployee(employeeRequestDTO));
         List<EmployeeDTO> employeeDTOS = new ArrayList<>();

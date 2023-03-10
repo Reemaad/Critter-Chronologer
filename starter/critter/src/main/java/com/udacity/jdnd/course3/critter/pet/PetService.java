@@ -55,11 +55,11 @@ public class PetService {
         return pet;
     }
 
-    public List<Pet> getPets() {//Done
+    public List<Pet> getPets() {
         return petRepository.findAll();
     }
 
-    public List<Pet> getPetsByOwner(long ownerId) {//Done
+    public List<Pet> getPetsByOwner(long ownerId) {
         Customer customer = customerRepository.findById(ownerId).orElse(null);
 
         if (customer == null)

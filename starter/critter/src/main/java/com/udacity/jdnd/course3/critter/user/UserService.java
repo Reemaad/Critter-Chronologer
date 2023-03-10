@@ -7,6 +7,7 @@ import com.udacity.jdnd.course3.critter.pet.PetRepository;
 import com.udacity.jdnd.course3.critter.utils.NotFoundException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.time.DayOfWeek;
 import java.util.List;
@@ -18,6 +19,7 @@ import static com.udacity.jdnd.course3.critter.Constants.Constants.Exception.EMP
 
 @Slf4j
 @Service
+@Transactional
 public class UserService {
     //TODO: Add description before each method
 
